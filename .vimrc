@@ -8,7 +8,6 @@ call plug#begin('~/.vim/plugged')
 	Plug 'vim-scripts/c.vim'
         Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
         Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-        Plug 'https://github.com/Valloric/YouCompleteMe', { 'do': './install.py' }
         " ...
 
         call plug#end()
