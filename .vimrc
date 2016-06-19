@@ -23,8 +23,6 @@ filetype indent on "File type based indentation"
 "Color theme"
 colorscheme gotham
 
-
-
 "window panes switch"
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -37,13 +35,19 @@ autocmd FileType c,cpp,java set formatoptions+=ro
 autocmd FileType c set omnifunc=ccomplete#Complete
 
 "fixed indentation xml, css of 2"
-autocmd FileType html,xhtml,css,xml,xslt set shiftwidth=2 softtabstop=2
+autocmd FileType html,xhtml,css,xml,xslt set shiftwidth=4 softtabstop=4
+
+"Completion php"
+autocmd Filetype php setlocal ts=4 sts=4 sw=4
 
 "Completion xhtml"
 autocmd FileType xhtml,html set omnifunc=hmtlcomplete#CompleteTags
 
 "Completion css"
-autocmd FileType css set omnifunc=csscomplete#CompleteCss
+autocmd FileType css set omnifunc=csscomplete#CompleteCss'
+
+"Completion javascript"
+autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
 
 "Complete xml"
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
@@ -52,7 +56,7 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType vim,lua,nginx, set shiftwidth=2 softtabstop=2
 
 "makefile, don't expand tabs to spaces"
-autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
+autocmd FileType make set noexpandtab shiftwidth=4 softtabstop=0
 
 "C.vim enable cmake and doxygen"
 let g:C_UseTool_cmake = 'yes'
