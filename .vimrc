@@ -7,7 +7,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'bling/vim-airline'
 	Plug 'vim-scripts/c.vim'
 	Plug 'shawncplus/phpcomplete.vim'
-	Plug 'skammer/vim-css-color'
+	Plug 'ap/vim-css-color'
         Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
         Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
         " ...
