@@ -6,6 +6,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-fugitive'
 	Plug 'bling/vim-airline'
 	Plug 'vim-scripts/c.vim'
+	Plug 'shawncplus/phpcomplete.vim'
+	Plug 'skammer/vim-css-color'
         Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
         Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
         " ...
@@ -38,7 +40,7 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType html,xhtml,css,xml,xslt set shiftwidth=4 softtabstop=4
 
 "Completion php"
-autocmd Filetype php setlocal ts=4 sts=4 sw=4
+autocmd Filetype php setlocal omnifunc=phpcomplete#CompletePHP ts=4 sts=4 sw=4
 
 "Completion xhtml"
 autocmd FileType xhtml,html set omnifunc=hmtlcomplete#CompleteTags
@@ -67,7 +69,11 @@ set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
+"Vim linnumber"
+set number
+
 "NERDtree settings"
+let NERDTreeShowLineNumbers=1
 autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
