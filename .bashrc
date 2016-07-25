@@ -29,5 +29,6 @@ alias wget='wget -c'
 alias histg='history | grep'
 alias top='htop'
 alias myip='curl http://ipecho.net/plain; echo'
+alias make='make -j$(nproc)'
 
 archey3

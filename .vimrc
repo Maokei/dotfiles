@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'ap/vim-css-color'
         Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
         Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+        Plug 'ternjs/tern_for_vim' 
         " ...
 
         call plug#end()
