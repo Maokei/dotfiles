@@ -53,6 +53,9 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCss'
 "Completion javascript"
 autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
 
+"vim-javascript"
+let g:javascript_plugin_jsdoc = 1
+
 "Complete xml"
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 
