@@ -1,23 +1,24 @@
 call plug#begin('~/.vim/plugged')
 
-        Plug 'whatyouhide/vim-gotham'
-        Plug 'junegunn/vim-easy-align'
+	Plug 'whatyouhide/vim-gotham'
+	Plug 'junegunn/vim-easy-align'
 	Plug 'airblade/vim-gitgutter'
 	Plug 'tpope/vim-fugitive'
 	Plug 'bling/vim-airline'
 	Plug 'vim-scripts/c.vim'
-	Plug 'shawncplus/phpcomplete.vim'
 	Plug 'ap/vim-css-color'
-        Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-        Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-        Plug 'ternjs/tern_for_vim' 
-        " ...
+	Plug 'leshill/vim-json'
+	Plug 'pangloss/vim-javascript'
+	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+	Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+	Plug 'ternjs/tern_for_vim' 
+	" ...
 
-        call plug#end()
+call plug#end()
 
 "Enable filetype plugins"
-filetype on
-filetype plugin on
+"filetype on"
+"filetype plugin on"
 filetype indent on "File type based indentation"
 
 "set background=dark"
