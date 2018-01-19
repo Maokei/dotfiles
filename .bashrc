@@ -21,6 +21,8 @@ export PATH=${PATH}:~/android-sdks/
 export PATH=${PATH}:~/android-sdks/tools
 export PATH=${PATH}:~/android-sdks/platform-tools
 export PATH=${PATH}:~/android-sdks/build-tools
+#.net core
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
 #alias
 alias ls='ls -lFS'
 alias ll='ls -lhA'
@@ -31,4 +33,4 @@ alias top='htop'
 alias myip='curl http://ipecho.net/plain; echo'
 alias make='make -j$(nproc)'
 
-archey3
+neofetch
