@@ -91,7 +91,10 @@ let g:deoplete#file#enable_buffer_path = 1
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 "neomake"
-autocmd! BufWritePost,BufEnter * Neomake
+augroup vimrc_neomake
+  au!
+  autocmd BufWritePost * Neomake
+augroup END
 
 "neoformat"
 augroup astyle
