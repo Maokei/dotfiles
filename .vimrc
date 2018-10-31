@@ -12,7 +12,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 	Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 	Plug 'ternjs/tern_for_vim'
-	" Java &groovy
+	" Java & groovy
 	Plug 'sbdchd/neoformat'
 	Plug 'artur-shaik/vim-javacomplete2'
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
