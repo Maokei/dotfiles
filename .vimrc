@@ -11,7 +11,12 @@ call plug#begin('~/.vim/plugged')
 	Plug 'pangloss/vim-javascript'
 	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 	Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-	Plug 'ternjs/tern_for_vim' 
+	Plug 'ternjs/tern_for_vim'
+	" Java &groovy
+	Plug 'sbdchd/neoformat'
+	Plug 'artur-shaik/vim-javacomplete2'
+	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+	Plug 'neomake/neomake'
 	" ...
 
 call plug#end()
@@ -73,6 +78,18 @@ let g:C_UseTool_doxygen = 'yes'
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+
+"Java Complete"
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
+"neomake"
+autocmd! BufWritePost,BufEnter * Neomake
+
+"neoformat"
+augroup astyle
+  autocmd!
+  autocmd BufWritePre * Neoformat
+augroup END
 
 "Vim linenumber"
 set number
