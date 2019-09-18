@@ -39,13 +39,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_run
 
 # Lock screen
-bindsym $mod+z exec i3lock
-
-exec --no-startup-id nm-applet
-exec --no-startup-id blueman-applet
-
-#wallpaper
-exec --no-startup-id feh --bg-fill "~/home/maokei/rickard.joh@gmail.com/tapeter/wallpaper-1136943.jpg"
+#bindsym $mod+z exec i3lock
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -178,13 +172,20 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl -- set-sink-mute 0 toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
-bindsym $mod+x exec i3lock-fancy
-exec nitrogen --restore
+#lockscreen
+bindsym $mod+z exec i3lock-fancy
+#startup
+exec --no-startup-id nitrogen --restore
+exec --no-startup-id nm-applet
+exec --no-startup-id blueman-applet
+
+new_window pixel 0
 gaps inner 0
 gaps outer 5
