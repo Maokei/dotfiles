@@ -20,6 +20,7 @@ call plug#begin()
     Plug 'mattn/emmet-vim'
     Plug 'airblade/vim-gitgutter'
     Plug 'sheerun/vim-polyglot'
+    Plug 'ap/vim-css-color'
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1
