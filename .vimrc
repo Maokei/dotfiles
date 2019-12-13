@@ -42,3 +42,5 @@ let NERDTreeShowHidden=1
 "Vim linenumber"
 set number
 
+"default tab"
+set tabstop=4
