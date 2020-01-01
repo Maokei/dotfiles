@@ -20,6 +20,7 @@ call plug#begin()
     Plug 'mattn/emmet-vim'
     Plug 'airblade/vim-gitgutter'
     Plug 'sheerun/vim-polyglot'
+    Plug 'ap/vim-css-color'
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1
@@ -41,6 +42,9 @@ let NERDTreeShowHidden=1
   
 "Vim linenumber"
 set number
+
+"default tab"
+set tabstop=4
 
 "javascript"
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=0 expandtab
