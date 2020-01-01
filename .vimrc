@@ -42,3 +42,5 @@ let NERDTreeShowHidden=1
 "Vim linenumber"
 set number
 
+"javascript"
+autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=0 expandtab
