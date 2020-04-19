@@ -32,5 +32,6 @@ alias histg='history | grep'
 alias top='htop'
 alias myip='curl http://ipecho.net/plain; echo'
 alias make='make -j$(nproc)'
+alias dockrel="docker stats $(docker ps | awk '{if(NR>1) print $NF}')"
 
 neofetch
