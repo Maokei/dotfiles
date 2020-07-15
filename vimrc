@@ -5,13 +5,14 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 call plug#begin()
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'neoclide/coc.nvim', {'branch': 'release'} "Conqer of completion :CocInstall coc-json coc-tsserver
     Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
     Plug 'tyrannicaltoucan/vim-quantum'
-    Plug 'mxw/vim-jsx'
-    Plug 'pangloss/vim-javascript'
+    Plug 'pangloss/vim-javascript'      "javascript support
+    Plug 'leafgarland/typescript-vim'   "typescript support
+    Plug 'maxmellon/vim-jsx-pretty'     "JS and JSX syntax
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'scrooloose/nerdtree'
@@ -22,20 +23,10 @@ call plug#begin()
     Plug 'sheerun/vim-polyglot'
     Plug 'ap/vim-css-color'
     Plug 'ayu-theme/ayu-vim'
+    Plug 'jparise/vim-graphql'          "GraphQL syntax
 call plug#end()
 
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_ignore_case = 1
-let g:deoplete#enable_smart_case = 1
-let g:deoplete#enable_camel_case = 1
-let g:deoplete#enable_refresh_always = 1
-let g:deoplete#max_abbr_width = 0
-let g:deoplete#max_menu_width = 0
-let g:deoplete#omni#input_patterns = get(g:,'deoplete#omni#input_patterns',{})
-let g:tern_request_timeout = 1
-let g:tern_request_timeout = 6000
-let g:tern#command = ['tern']
-let g:tern#arguments = [' — persistent']
+let g:coc_global_extensions = [ 'coc-tsserver' ]
 
 map <C-o> :NERDTreeToggle<CR>
 let NERDTreeShowLineNumbers=1
