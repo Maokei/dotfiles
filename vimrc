@@ -5,19 +5,20 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 call plug#begin()
-    Plug 'neoclide/coc.nvim', {'branch': 'release'} "Conqer of completion :CocInstall coc-json coc-tsserver
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
     Plug 'tyrannicaltoucan/vim-quantum'
     Plug 'pangloss/vim-javascript'      "javascript support
     Plug 'leafgarland/typescript-vim'   "typescript support
-    Plug 'maxmellon/vim-jsx-pretty'     "JS and JSX syntax
+    Plug 'maxmellon/vim-jsx-pretty'     "JS and JSX syntaxa
+    Plug 'elzr/vim-json'                "Json"
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'scrooloose/nerdtree'
-    Plug 'junegunn/fzf'
-    Plug 'junegunn/fzf.vim'
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	Plug 'junegunn/fzf.vim'             " Set up fzf and fzf.vim
     Plug 'mattn/emmet-vim'
     Plug 'airblade/vim-gitgutter'
     Plug 'sheerun/vim-polyglot'
@@ -26,7 +27,12 @@ call plug#begin()
     Plug 'jparise/vim-graphql'          "GraphQL syntax
 call plug#end()
 
-let g:coc_global_extensions = [ 'coc-tsserver' ]
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
 
 map <C-o> :NERDTreeToggle<CR>
 let NERDTreeShowLineNumbers=1
@@ -34,6 +40,9 @@ let NERDTreeShowHidden=1
   
 "Vim linenumber"
 set number
+
+" Allow copy and paste from system clipboard
+set clipboard=unnamed
 
 "default tab"
 set tabstop=4
@@ -52,3 +61,26 @@ set background="dark"
 let ayucolor="mirage" " for mirage version of theme
 "let ayucolor="dark"   " for dark version of theme
 colorscheme ayu
+
+" CoC extensions
+let g:coc_global_extensions = ['coc-solargraph', 'coc-tsserver', 'coc-json']
+
+" Add CoC Prettier if prettier is installed
+if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+  let g:coc_global_extensions += ['coc-prettier']
+endif
+
+" Add CoC ESLint if ESLint is installed
+if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+  let g:coc_global_extensions += ['coc-eslint']
+endif
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Remap keys for applying codeAction to the current line.
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
