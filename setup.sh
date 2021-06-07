@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+#pip2 install --upgrade pynvim
 pip3 install --upgrade pynvim
 yarn global add neovim
 
