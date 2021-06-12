@@ -25,6 +25,7 @@ call plug#begin()
     Plug 'ap/vim-css-color'
     Plug 'ayu-theme/ayu-vim'
     Plug 'jparise/vim-graphql'          "GraphQL syntax
+    Plug 'tomlion/vim-solidity'
 call plug#end()
 
 " Use <c-space> to trigger completion.
