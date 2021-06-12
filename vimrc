@@ -55,7 +55,7 @@ set autoindent
 "javascript"
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=0 expandtab
 
- "theme"
+" theme"
 set termguicolors
 set background="dark"
 "let ayucolor="light"  " for light version of theme
