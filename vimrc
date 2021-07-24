@@ -13,7 +13,7 @@ call plug#begin()
     Plug 'pangloss/vim-javascript'      "javascript support
     Plug 'leafgarland/typescript-vim'   "typescript support
     Plug 'maxmellon/vim-jsx-pretty'     "JS and JSX syntaxa
-    Plug 'elzr/vim-json'                "Json"
+    Plug 'elzr/vim-json'                "Json
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'scrooloose/nerdtree'
@@ -25,6 +25,7 @@ call plug#begin()
     Plug 'ap/vim-css-color'
     Plug 'ayu-theme/ayu-vim'
     Plug 'jparise/vim-graphql'          "GraphQL syntax
+    Plug 'prettier/vim-prettier', { 'do':'yarn install' } "prettier for all formats
 call plug#end()
 
 " Use <c-space> to trigger completion.
