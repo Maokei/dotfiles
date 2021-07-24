@@ -25,7 +25,11 @@ call plug#begin()
     Plug 'ap/vim-css-color'
     Plug 'ayu-theme/ayu-vim'
     Plug 'jparise/vim-graphql'          "GraphQL syntax
+<<<<<<< HEAD
     Plug 'prettier/vim-prettier', { 'do':'yarn install' } "prettier for all formats
+=======
+    Plug 'tomlion/vim-solidity'
+>>>>>>> 825a51c63b035d6041b59dfff46bb25fbe7e8950
 call plug#end()
 
 " Use <c-space> to trigger completion.
@@ -55,7 +59,7 @@ set autoindent
 "javascript"
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=0 expandtab
 
- "theme"
+" theme"
 set termguicolors
 set background="dark"
 "let ayucolor="light"  " for light version of theme
