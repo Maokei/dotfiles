@@ -25,11 +25,8 @@ call plug#begin()
     Plug 'ap/vim-css-color'
     Plug 'ayu-theme/ayu-vim'
     Plug 'jparise/vim-graphql'          "GraphQL syntax
-<<<<<<< HEAD
     Plug 'prettier/vim-prettier', { 'do':'yarn install' } "prettier for all formats
-=======
     Plug 'tomlion/vim-solidity'
->>>>>>> 825a51c63b035d6041b59dfff46bb25fbe7e8950
 call plug#end()
 
 " Use <c-space> to trigger completion.
