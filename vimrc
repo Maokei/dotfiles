@@ -10,6 +10,7 @@ call plug#begin()
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
     Plug 'tyrannicaltoucan/vim-quantum'
+    Plug 'evanleck/vim-svelte'
     Plug 'pangloss/vim-javascript'      "javascript support
     Plug 'leafgarland/typescript-vim'   "typescript support
     Plug 'maxmellon/vim-jsx-pretty'     "JS and JSX syntaxa
