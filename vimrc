@@ -48,14 +48,18 @@ set number
 set clipboard=unnamed
 
 "default tab"
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 set autoindent
 
 "javascript"
-autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=0 expandtab
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=0 expandtab
+
+"yaml"
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 
 " theme"
 set termguicolors
