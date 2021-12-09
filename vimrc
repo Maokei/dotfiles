@@ -18,8 +18,8 @@ call plug#begin()
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'scrooloose/nerdtree'
-	  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-	  Plug 'junegunn/fzf.vim'             " Set up fzf and fzf.vim
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'             " Set up fzf and fzf.vim
     Plug 'mattn/emmet-vim'
     Plug 'airblade/vim-gitgutter'
     Plug 'sheerun/vim-polyglot'
@@ -54,6 +54,9 @@ cmap w!! w !sudo tee %
 set backupdir=~/.local/share/nvim/backup " Don't put backups in current dir
 set backup
 set noswapfile
+
+" Automatically re-read file if a change was detected outside of vim
+set autoread
 
 " Allow copy and paste from system clipboard
 set clipboard=unnamed
