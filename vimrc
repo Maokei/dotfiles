@@ -18,8 +18,8 @@ call plug#begin()
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'scrooloose/nerdtree'
-	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-	Plug 'junegunn/fzf.vim'             " Set up fzf and fzf.vim
+	  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	  Plug 'junegunn/fzf.vim'             " Set up fzf and fzf.vim
     Plug 'mattn/emmet-vim'
     Plug 'airblade/vim-gitgutter'
     Plug 'sheerun/vim-polyglot'
@@ -28,6 +28,7 @@ call plug#begin()
     Plug 'jparise/vim-graphql'          "GraphQL syntax
     Plug 'prettier/vim-prettier', { 'do':'yarn install' } "prettier for all formats
     Plug 'tomlion/vim-solidity'
+    Plug 'rust-lang/rust.vim'
 call plug#end()
 
 " Use <c-space> to trigger completion.
@@ -40,7 +41,10 @@ endif
 map <C-o> :NERDTreeToggle<CR>
 let NERDTreeShowLineNumbers=1
 let NERDTreeShowHidden=1
-  
+
+syntax enable
+filetype plugin indent on
+
 "Vim linenumber"
 set number
 
@@ -70,7 +74,7 @@ let ayucolor="mirage" " for mirage version of theme
 colorscheme ayu
 
 " CoC extensions
-let g:coc_global_extensions = ['coc-solargraph', 'coc-tsserver', 'coc-json']
+let g:coc_global_extensions = ['coc-solargraph', 'coc-snippets', 'coc-tsserver', 'coc-html', 'coc-css', 'coc-json', 'coc-java', 'coc-go', 'coc-kotlin', 'coc-lua', 'coc-python']
 
 " Add CoC Prettier if prettier is installed
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
