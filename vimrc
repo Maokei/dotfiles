@@ -26,7 +26,7 @@ call plug#begin()
     Plug 'ap/vim-css-color'
     Plug 'ayu-theme/ayu-vim'
     Plug 'jparise/vim-graphql'          "GraphQL syntax
-    Plug 'prettier/vim-prettier', { 'do':'yarn install' } "prettier for all formats
+    Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
     Plug 'tomlion/vim-solidity'
     Plug 'rust-lang/rust.vim'
 call plug#end()
@@ -41,6 +41,10 @@ endif
 map <C-o> :NERDTreeToggle<CR>
 let NERDTreeShowLineNumbers=1
 let NERDTreeShowHidden=1
+
+"vim-prettier"
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 syntax enable
 filetype plugin indent on
