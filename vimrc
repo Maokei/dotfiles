@@ -42,6 +42,9 @@ map <C-o> :NERDTreeToggle<CR>
 let NERDTreeShowLineNumbers=1
 let NERDTreeShowHidden=1
 
+nnoremap <C-l> <C-w>w
+nnoremap <C-h> <C-w>W
+
 "vim-prettier"
 let g:prettier#autoformat = 0
 let g:prettier#exec_cmd_async = 1
@@ -78,6 +81,9 @@ autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=0 expand
 "yaml"
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
+
+"sh"
+autocmd Filetype sh setlocal ts=2 sts=2 sw=2 expandtab
 
 " theme"
 set termguicolors
