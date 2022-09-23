@@ -29,6 +29,7 @@ call plug#begin()
     Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
     Plug 'tomlion/vim-solidity'
     Plug 'rust-lang/rust.vim'
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }'
 call plug#end()
 
 " Use <c-space> to trigger completion.
