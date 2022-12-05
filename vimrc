@@ -24,7 +24,7 @@ call plug#begin()
     Plug 'airblade/vim-gitgutter'
     Plug 'sheerun/vim-polyglot'
     Plug 'ap/vim-css-color'
-    Plug 'ayu-theme/ayu-vim'
+    Plug 'wadackel/vim-dogrun'
     Plug 'jparise/vim-graphql'          "GraphQL syntax
     Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
     Plug 'tomlion/vim-solidity'
@@ -89,10 +89,7 @@ autocmd FileType sh setlocal ts=2 sts=2 sw=2 expandtab
 " theme"
 set termguicolors
 set background="dark"
-"let ayucolor="light"  " for light version of theme
-let ayucolor="mirage" " for mirage version of theme
-"let ayucolor="dark"   " for dark version of theme
-colorscheme ayu
+colorscheme dogrun
 
 " CoC extensions
 let g:coc_global_extensions = ['coc-solargraph', 'coc-snippets', 'coc-tsserver', 'coc-html', 'coc-css', 'coc-json', 'coc-java', 'coc-go', 'coc-kotlin', 'coc-lua', 'coc-python']
