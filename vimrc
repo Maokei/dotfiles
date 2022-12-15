@@ -76,8 +76,11 @@ set shiftwidth=2
 set expandtab
 set autoindent
 
+"java"
+autocmd FileType java setlocal ts=2 sts=2 sw=2 expandtab
+
 "javascript"
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=0 expandtab
+autocmd FileType javascript setlocal ts=2 sts=0 sw=0 expandtab
 
 "yaml"
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
